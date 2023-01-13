@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //声明一个数组
+    const xiyou = ['唐僧','悟空','猪八戒','沙和尚'];
+
+    //使用for ...of 或 for ... in 遍历数组(前者是声明值，或者是键名)
+
+    // for(let v of xiyou){
+    //   console.log(v);
+    // }
+    // for(let v in xiyou){
+    //   console.log(v);
+    // }
+    
+    //工作原理： Array Arguments Set Map String TypeArray NodeList都含有Symbol对象的iterator属性
+    //所以可以进行遍历
+    let iterator = xiyou[Symbol.iterator]();
+
+    console.log(iterator.next());//第一次调用对象的next 方法,指针自动指向数据结构的第一个成员
+    console.log(iterator.next());//接下来不断调用，指针一直往后移动，直到指向最后一个成员
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());//done ：true 表示遍历完成
+    
+  </script>
+</body>
+</html>

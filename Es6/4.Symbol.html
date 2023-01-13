@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1. 创建symbol
+    let s = Symbol();
+    console.log(s, typeof s);
+    let s1 = Symbol('哈哈哈');
+    let s2 = Symbol('哈哈哈');
+    //2. 用对象创建不能进行比较，因为键名不唯一
+    console.log(s1 === s2);
+
+    //3. 用函数构建，可以进行比较
+    let s3 = Symbol.for('哈哈哈');
+    let s4 = Symbol.for('哈哈哈');
+    console.log(s3 === s4);
+
+    //4. 不能与其他数据进行运算
+    let rs = [s1 + s2, s1 > s2, s3];
+    console.log(...rs);//会报错
+
+  </script>
+</body>
+</html>
