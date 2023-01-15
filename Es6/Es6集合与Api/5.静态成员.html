@@ -1,0 +1,33 @@
+<html>
+  <script>
+    // function Phone(){
+
+    // };
+
+    // Phone.name = '手机';
+    // Phone.change = function(){
+    //   console.log('我可以改变世界！');
+    // }
+
+    // let redmi = new Phone();
+    //会报错， 出现undefined 因为实例化对象没有构造函数的属性和方法 实例化对象只跟原函数对象属性相通
+    // redmi.change();
+    // console.log(redmi.name);
+
+    class Phone{
+      //static属于类，不属于实例对象
+      static name = '手机';
+      static change(){
+        console.log('我可以改变！');
+      }
+    }
+
+    let p = new Phone();
+    //打印undefined
+    console.log(p.name);
+    
+    console.log(Phone.name);
+
+
+  </script>
+</html>

@@ -1,0 +1,18 @@
+<html>
+  <script>
+    class Phone {
+      set brand(param){
+        console.log('品牌');
+      }
+
+      get brand(){
+        console.log('被读取');
+        return '123';
+      }
+    }
+
+    let s = new Phone();
+    s.brand = 'mi'
+    console.log(s.brand)
+  </script>
+</html>

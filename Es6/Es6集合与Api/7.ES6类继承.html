@@ -1,0 +1,40 @@
+<html>
+  <script>
+    class Phone {
+      //构造方法
+      constructor(brand, price){
+        this.brand = brand;
+        this.price = price;
+      }
+
+      //父类的成员属性
+      call(){
+        console.log('我可以打电话！');
+      }
+    }
+
+    class SmartPhone extends Phone {
+      //构造方法
+      constructor(brand, price, color){
+        super(brand, price); //Phone.call(this, brand, price)
+        this.color = color;
+      }
+
+      //子类属性
+
+      PlayGame(){
+        console.log('打游戏!');
+      }
+
+      //子类对父类方法的重写(子类不能直接调用父类的方法)
+      call(){
+        console.log('我可以视频');
+      }
+    }
+
+    const xiaomi = new SmartPhone('MI', 4999, 'white');
+    console.log(xiaomi);
+
+
+  </script>
+</html>

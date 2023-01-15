@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //声明Map
+    let m = new Map();
+
+    //添加元素
+    m.set('name','小李');
+    m.set('change', function(){
+      console.log('hahaha');
+    });
+    let key = {
+      value : 'done',
+    };
+    m.set(key, [1,2,3,4]);
+
+    //size
+    //console.log(m.size);
+
+    //删除
+    // m.delete('name');
+
+    //获取
+    console.log(m.get('change'));
+    console.log(m.get('name'));
+    // console.log(m);
+
+  </script>
+</body>
+</html>

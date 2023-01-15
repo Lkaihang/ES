@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //声明一个set
+    let s = new Set();
+    let s1 = new Set(['1','2','3']);
+    
+    //元素个数
+    console.log(s1.size);
+    //添加元素
+    s1.add('4');
+    //删除元素
+    s1.delete('3');
+    //检测
+    console.log(s1.has('1'));
+
+    for(let v of s1){
+      console.log(v);
+    }
+    // //清除
+    // s1.clear();
+  </script>
+</body>
+</html>
